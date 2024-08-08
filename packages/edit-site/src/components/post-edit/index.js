@@ -46,8 +46,8 @@ function PostEditForm( { postType, postId } ) {
 	const { saveEntityRecord } = useDispatch( coreDataStore );
 	const { fields } = usePostFields();
 	const form = {
-		type: 'panel',
-		fields: [ 'title', 'author' ],
+		type: 'regular',
+		fields: [ 'title', 'author', 'comment_status' ],
 	};
 	const [ edits, setEdits ] = useState( {} );
 	const itemWithEdits = useMemo( () => {
